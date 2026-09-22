@@ -19,6 +19,7 @@ public class BankAccount {
         }
         currentBalance += amount;
         transactions[lastTransaction] = amount;
+        lastTransaction++;
         System.out.println("The amount " + amount + " MAD was successfully deposited to " + name + "'s balance. Current Balance : " + currentBalance);
     }
 
@@ -26,9 +27,12 @@ public class BankAccount {
         if(amount > currentBalance || amount < 0) {
             System.out.println("Invalid Withdraw");
         }
-        currentBalance -= amount;
-        transactions[lastTransaction] = -amount;
-        System.out.println("The amount " + amount + " MAD was successfully withdrawn from " + name + "'s balance. Current Balance : " + currentBalance);
+        else {
+            currentBalance -= amount;
+            transactions[lastTransaction] = -amount;
+            lastTransaction++;
+            System.out.println("The amount " + amount + " MAD was successfully withdrawn from " + name + "'s balance. Current Balance : " + currentBalance);
+        }
     }
 
     public void displayTransactions(){

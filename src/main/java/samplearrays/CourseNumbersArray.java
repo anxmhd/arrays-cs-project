@@ -13,14 +13,14 @@ public class CourseNumbersArray {
         updatedCourses[registeredCourses.length] = newCourse;
 
         System.out.println("Updated Courses :");
-        for(int el : updatedCourses) System.out.println(el + " ");
+        for(int el : updatedCourses) System.out.println(el);
 
-        int courseToCheck = 2140;
+        int courseToCheck = 3000;
         boolean found = false;
         for(int el : updatedCourses) {
             if(el == courseToCheck) found = true;
         }
         if(found) System.out.println("Course " + courseToCheck + " found");
-        else System.out.println("Course " + courseToCheck + "not found");
+        else System.out.println("Course " + courseToCheck + " not found");
     }
 }
