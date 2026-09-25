@@ -143,6 +143,7 @@ public class ManageStudent {
         // 6) Sort by grade desc
         // sort function
         System.out.println("\n=== Sorted by grade (desc) ===");
+        sortByGradeDesc(students);
         for (Student s : students) System.out.println(s);
 
         // 7) High achievers >= 15
