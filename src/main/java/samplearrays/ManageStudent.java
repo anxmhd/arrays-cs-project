@@ -37,7 +37,7 @@ public class ManageStudent {
             average += s.getGrade();
 
         }
-        average /= (double) studentCount;
+        average /= studentCount;
         return average;
     }
 
@@ -45,7 +45,7 @@ public class ManageStudent {
     public static Student findStudentByName(Student[] students, String name) {
         Student studentToFind = null;
         for(Student s : students) {
-            if(s.getName() == name) {
+            if(s.getName().equals(name)) {
                 studentToFind = s;
                 break;
             }
